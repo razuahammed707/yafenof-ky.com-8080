@@ -13,17 +13,22 @@ function Table(props) {
             <table className="table" >
                 <thead>
                     <tr>
-                        <th>Person</th>
-                        <th>Date</th>
+                        <th>תאריך</th>
+                        <th>מתנדב 1</th>
+                        <th>מתנדב 2</th>
                     </tr>
                 </thead>
                 <tbody>
-                {userDetails.map(item=>{
+                
+                    {userDetails.map(item=>{
                         return(<tr>
-                            <td>{item.userName}</td>
-                            <td>{item.date}</td>
+                            <td>{item._id}</td>
+                            <td>{(item.data[0]!==undefined?item.data[0].userName:" ")}</td>
+                            <td>{(item.data[1]!==undefined?item.data[1].userName:" ")}</td>
+
                         </tr>)
                     })}
+                
                     
                 </tbody>
             </table>

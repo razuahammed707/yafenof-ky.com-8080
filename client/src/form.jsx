@@ -2,7 +2,8 @@ import './App.css';
 
 function Form(props) {
   return (
-    <form onSubmit={props.create}>
+    <div className="mainForm">
+        <form onSubmit={props.create}>
         <input type="text" name="userName"placeholder="שם המתנדב" required/>
         <input type="text" name ="cellPhone"placeholder="מספר סלולרי" required/>
         <br/>
@@ -74,6 +75,7 @@ function Form(props) {
         <input type="submit" value="הירשם" className="submitBtn"/>
 
     </form>
+    </div>
   );
 }
 
