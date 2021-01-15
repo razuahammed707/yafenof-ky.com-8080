@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 const User = require("../model/user")
 const RegisteredUser= require("../model/registedUser");
-const NewUser = require("../model/newuser")
+const NewUser = require("../model/newuser");
+const allDate = require("../model/date")
 
 /* GET home page. */
 router.post('/all', async function(req, res, next) {
@@ -17,11 +18,14 @@ router.post('/all', async function(req, res, next) {
           }
         }
       }]);
+
+      const allDates = await allDate.find({})
     
 
       res.send({
         status:true,
-        body:user
+        body:user,
+        date:allDates
       })
 
     }catch(err){
