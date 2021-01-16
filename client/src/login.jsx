@@ -4,12 +4,11 @@ function Intro() {
 
   const login=(e)=>{
     e.preventDefault();
-    if(e.target.password.value==="123"){
+    if(e.target.password.value==="myn@2021"){
         localStorage.setItem("userAuthenticate",true)
         window.location="/app";
-        alert("hello")
     }else{
-        alert("Please enter the valid code")
+        alert("לפני שנכנסים - סיסמא")
     }
   }
   return (
