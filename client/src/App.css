@@ -87,7 +87,7 @@ p{
     margin: 10px 0;
   }
   .dates{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     direction: rtl;
   }
   .mainForm form input[type="checkbox"]{

@@ -14,9 +14,9 @@ function Intro() {
   return (
     <div className="loginForm">
         <form onSubmit={login}>
-            <label>Enter the unique  code</label>
-            <input type="password" name="password" placeholder="Enter your password"/>
-            <input type="submit" value="login"/>
+            <label>לפני שנכנסים - סיסמא</label>
+            <input type="password" name="password" placeholder="סיסמא"/>
+            <input type="submit" value="כניסה למערכת"/>
         </form>
     </div>
   );
