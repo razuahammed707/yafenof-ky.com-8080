@@ -4,7 +4,7 @@ function Intro() {
 
   const login=(e)=>{
     e.preventDefault();
-    if(e.target.password.value==="myn@2021"){
+    if(e.target.password.value==="ky@2021"){
         localStorage.setItem("userAuthenticate",true)
         window.location="/app";
     }else{
