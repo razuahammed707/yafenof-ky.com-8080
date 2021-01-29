@@ -27,9 +27,6 @@ function PrivateRoute() {
       fullName:e.target.fullName.value,
       cellPhone:e.target.cellPhone.value,
       email:e.target.email.value,
-      id:e.target.id.value,
-      address:e.target.address.value,
-      birthDate:e.target.birthDate.value,
     }
     let user=await axios.post("/newUser",data);
     // alert("Account Created");
@@ -45,7 +42,7 @@ function PrivateRoute() {
   const createUser=async(e)=>{
     e.preventDefault();
     if(!e.target.date.value){
-      alert("Please choose a date");
+      alert("יש לבחור תאריך");
       return 1;
     }
    
