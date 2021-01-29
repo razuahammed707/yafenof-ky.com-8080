@@ -44,13 +44,17 @@ function PrivateRoute() {
 
   const createUser=async(e)=>{
     e.preventDefault();
+    if(!e.target.date.value){
+      alert("Please choose a date");
+      return 1;
+    }
    
     let data={
       userName:e.target.userName.value,
       cellPhone:e.target.cellPhone.value,
       date:e.target.date.value,
-
     }
+
     let user = await axios.post("/",{...data});
     alert(user.data.message);
 
